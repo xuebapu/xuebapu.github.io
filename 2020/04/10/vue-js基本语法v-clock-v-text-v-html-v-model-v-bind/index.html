@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>vue-js基本语法v-clock-v-text-v-html-v-model-v-bind | Xueba bloge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#v-text，v-htm，v-cloak，v-bind，.prevent，.stop，.capture，，v-model的基本用法# v-text，v-htm，v-cloak，v-bind，v-htm用法">
+  <meta name="description" content="v-text，v-htm，v-cloak，v-bind，v-htm用法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue-js基本语法v-clock-v-text-v-html-v-model-v-bind">
 <meta property="og:url" content="http://yoursite.com/2020/04/10/vue-js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95v-clock-v-text-v-html-v-model-v-bind/index.html">
 <meta property="og:site_name" content="Xueba bloge">
-<meta property="og:description" content="#v-text，v-htm，v-cloak，v-bind，.prevent，.stop，.capture，，v-model的基本用法# v-text，v-htm，v-cloak，v-bind，v-htm用法">
+<meta property="og:description" content="v-text，v-htm，v-cloak，v-bind，v-htm用法">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-10T04:02:29.066Z">
-<meta property="article:modified_time" content="2020-04-12T02:34:15.540Z">
+<meta property="article:modified_time" content="2020-04-12T02:41:08.116Z">
 <meta property="article:author" content="Xueba Pu">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="vue.js">
@@ -190,8 +190,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#v-text，v-htm，v-cloak，v-bind，.prevent，.stop，.capture，，v-model的基本用法#</p>
-<h2 id="v-text，v-htm，v-cloak，v-bind，v-htm用法"><a href="#v-text，v-htm，v-cloak，v-bind，v-htm用法" class="headerlink" title="v-text，v-htm，v-cloak，v-bind，v-htm用法"></a>v-text，v-htm，v-cloak，v-bind，v-htm用法</h2><a id="more"></a> 
+        <h2 id="v-text，v-htm，v-cloak，v-bind，v-htm用法"><a href="#v-text，v-htm，v-cloak，v-bind，v-htm用法" class="headerlink" title="v-text，v-htm，v-cloak，v-bind，v-htm用法"></a>v-text，v-htm，v-cloak，v-bind，v-htm用法</h2><a id="more"></a> 
 <pre><code>&lt;div id=&quot;app&quot;&gt;
 &lt;!-- v-cloak  解决 插值表达式闪烁--&gt;
     &lt;p v-cloak&gt;{{ message }}&lt;/p&gt;
@@ -237,7 +236,7 @@
     &lt;p&gt;{{message}}&lt;/p&gt;
     &lt;input type=&quot;text&quot; width=&quot;300px;&quot; v-model=&quot;message&quot;&gt;
 &lt;/div&gt;</code></pre><hr>
-<p>##script 的基本语法##<br>    <script><br>           var vm = new Vue({<br>            el: '#app',//要控制的区域<br>            data: {//存放在el中的数据<br>                message: 'Hello Vue.js!',//通过 Vue 提供的指令，把数据渲染到页面；不在操作dom<br>                message2: '<h1>我是h1  我的大</h1>',<br>                mytitle: '这是自己定义的title',<br>            },<br>            methods: {//定义Vue 中所用的方法   **注意  method  后面要加s  methods:<br>                show () {<br>                        alert("hello")<br>                },<br>                div(){<br>                    console.log("div")<br>                },<br>                maopao(){<br>                    console.log("maopao")<br>                },<br>                linkbaidu(){<br>                    console.log("baidu")<br>                },<br>                capture(){<br>                    console.log("capture")<br>                },<br>                self(){<br>                    console.log("self")<br>                },<br>                once(){<br>                    console.log("once")<br>                },<br>            },<br>        })<br>    </script></p>
+<p>##script 的基本语法##<br>    <script><br>    var vm = new Vue({<br>        el: '#app',//要控制的区域<br>        data: {//存放在el中的数据<br>            message: 'Hello Vue.js!',//通过 Vue 提供的指令，把数据渲染到页面；不在操作dom<br>            message2: '<h1>我是h1  我的大</h1>',<br>            mytitle: '这是自己定义的title',<br>        },<br>        methods: {//定义Vue 中所用的方法   **注意  method  后面要加s  methods:<br>            show () {<br>                    alert("hello")<br>            },<br>            div(){<br>                console.log("div")<br>            },<br>            maopao(){<br>                console.log("maopao")<br>            },<br>            linkbaidu(){<br>                console.log("baidu")<br>            },<br>            capture(){<br>                console.log("capture")<br>            },<br>            self(){<br>                console.log("self")<br>            },<br>            once(){<br>                console.log("once")<br>            },<br>        },<br>    })<br>    </script></p>
 
       
 
