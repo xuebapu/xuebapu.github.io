@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Vue.js 制作一个简易商品管理 | Xueba bloge</title>
+  <title>下载vueue-resource.js下载链接 | Xueba bloge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Vue.js制作简易商品管理">
+  <meta name="description" content="下载vueue-resource.js下载链接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue.js 制作一个简易商品管理">
-<meta property="og:url" content="http://yoursite.com/2020/04/18/Vue-js-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:title" content="下载vueue-resource.js下载链接">
+<meta property="og:url" content="http://yoursite.com/2020/04/18/%E4%B8%8B%E8%BD%BDvueue-resource-js%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/index.html">
 <meta property="og:site_name" content="Xueba bloge">
-<meta property="og:description" content="Vue.js制作简易商品管理">
+<meta property="og:description" content="下载vueue-resource.js下载链接">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-18T03:34:47.000Z">
-<meta property="article:modified_time" content="2020-04-18T03:50:28.575Z">
+<meta property="article:published_time" content="2020-04-18T04:20:06.000Z">
+<meta property="article:modified_time" content="2020-04-18T04:23:48.116Z">
 <meta property="article:author" content="Xueba Pu">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="vue.js">
@@ -170,175 +170,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Vue-js-制作一个简易商品管理" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-下载vueue-resource-js下载链接" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Vue.js 制作一个简易商品管理
+      下载vueue-resource.js下载链接
     </h1>
   
 
         
-        <a href="/2020/04/18/Vue-js-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-04-18T03:34:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-18</time>
+        <a href="/2020/04/18/%E4%B8%8B%E8%BD%BDvueue-resource-js%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/" class="archive-article-date">
+  	<time datetime="2020-04-18T04:20:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Vue-js制作简易商品管理"><a href="#Vue-js制作简易商品管理" class="headerlink" title="Vue.js制作简易商品管理"></a>Vue.js制作简易商品管理</h1><a id="more"></a>
-<p>实现的功能：商品列表的导出，商品的增删，关键字查询（着用到了vue-devtools 前面博客有写安装方法及途经），进入页面自动聚焦搜索框，搜索框文字变色，时间的格式改变</p>
-<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h2><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;品牌管理案例&lt;/title&gt;
-&lt;script src=&quot;lib/vue.js&quot;&gt;&lt;/script&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/public.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/pingPaiGL.css&quot;&gt;
+        <h1 id="下载vueue-resource-js下载链接"><a href="#下载vueue-resource-js下载链接" class="headerlink" title="下载vueue-resource.js下载链接"></a>下载vueue-resource.js下载链接</h1><a id="more"></a>
 
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id=&quot;app&quot;&gt;
-&lt;h2&gt; 添加商品&lt;/h2&gt;
-&lt;!-- class=&quot;form-inline 子元素在一行内排列  --&gt;
-&lt;div class=&quot;form-inline&quot;&gt;
-    Id:
-    &lt;input type=&quot;text&quot; v-model=&quot;id&quot;&gt;
-    name:&lt;!--   @keyup=&quot;add&quot;   监听事件 键盘弹起时执行函数  .enter只有当键盘enter键弹起时才执行   可以以自定义--&gt;
-    &lt;input type=&quot;text&quot; v-model=&quot;name&quot; @keyup.f2=&quot;add&quot;&gt;
-&lt;!--   @click=&quot;add&quot;  若为 @click=&quot;add()&quot; 可传参    --&gt;
-    &lt;input type=&quot;button&quot; value=&quot;添加商品&quot; @click=&quot;add&quot;&gt;
-&lt;!-- 思路： 之前是 v-for中的诗句，都是直接data上的list中拿的数据  现在我们自定义一个search把关键字通过传参的方式传给search   在search 方法内部执行for把所有关键字的数据保存在一新的数组中返回--&gt;
-&lt;!--    可以自定义指定    v-focus  自定义的指令  已经网页就聚焦到这里--&gt;
-    名称关键字搜索：&lt;input type=&quot;text&quot; v-model=&quot;keywords&quot; v-focus v-color=&quot;&apos;blue&apos;&quot;&gt;
-&lt;/div&gt;
-&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Id&lt;/th&gt;
-            &lt;th&gt;name&lt;/th&gt;
-            &lt;th&gt;Ctime&lt;/th&gt;
-            &lt;th&gt;Operation&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-    &lt;tr v-for=&quot;item in search(keywords)&quot; :key=&quot;item.id&quot;&gt;
-        &lt;td&gt;{{item.id}}&lt;/td&gt;
-        &lt;td&gt;{{item.name}}&lt;/td&gt;
-        &lt;td&gt;{{item.Ctime | mytime}}&lt;/td&gt;
-        &lt;td&gt;&lt;a href=&quot;#&quot; @click.prevent=&quot;del(item.id)&quot;&gt;删除&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
+<h2 id="vueue-resource-js-下载链接"><a href="#vueue-resource-js-下载链接" class="headerlink" title="vueue-resource.js 下载链接"></a><a href="https://www.bootcdn.cn/vue-resource/" target="_blank" rel="noopener">vueue-resource.js 下载链接</a></h2><p>复制代码到项目js文件下</p>
 
-
-&lt;/div&gt;
-
-
-&lt;script&gt;
-//过滤器从新定义时间格式定义时间   就近原则
-//es6 新增  字符串独有的 用于格式化 补o String.prototype.padStart（maxLength:字符长度，fillString=‘’：填充字符）前面填充
-//String.prototype.padEnding（maxLength:字符长度，fillString=‘’：填充字符）后面填充
-Vue.filter(&apos;mytime&apos;,function (mt) {
-    var dt = new Date(mt);
-    var y = dt.getFullYear();
-    var m = (dt.getMonth()+1).toString().padStart(2,&apos;0&apos;);
-    var d = dt.getDate().toString().padStart(2,&apos;0&apos;);
-    var hh = dt.getHours().toString().padStart(2,&apos;0&apos;);
-    var mm = dt.getMinutes().toString().padStart(2,&apos;0&apos;);
-    var ss = dt.getSeconds().toString().padStart(2,&apos;0&apos;);
-    //注意书写格式 是tab键上的点  不是引号
-    return `${y}-${m}-${d}  ${hh}:${mm}:${ss}`;
-})
-
-//自定义按键修饰符
-Vue.config.keyCodes.f2=113;
-//自定义全局指令 全局不加s  指令名称在定义是不需要加v- 但在调用时要加v-
-Vue.directive(&apos;focus&apos;,{//可以理解为 方法函数就要写在inserted  样式写在bind  **若有错误请大佬留言
-    bind: function (el) {//当指令绑定到元素时，会立即执行bind，只执行一次
-        //注意 在每个函数中，第一个参数，永远是el，表示绑定了指令的那个元素。el参数是原生的js对象：就是Dom
-    },
-    inserted: function (el) {//insertted 当元素插入人道DOM会执行 函数触发一次
-       //行为 要在Dom中才有效
-        el.focus();
-    },
-    updated: function () {//当vnodes更新时，会执行函数 可能触发多次
-
-    },
-
-});
-
-Vue.directive(&apos;color&apos;,{
-    bind: function (el,binding) {
-        //样式在bind就行
-        el.style.color= binding.value
-    }
-})
-
-var va = new Vue({
-    el:&apos;#app&apos;,
-    data:{
-        id:&apos;&apos;,
-        name:&apos;&apos;,
-        Ctime:&apos;&apos;,
-        keywords:&apos;&apos;,//关键字搜索
-        list:[
-            {id:1,name:&apos;宝马&apos;,Ctime:new Date()},
-            {id:2,name:&apos;奔驰&apos;,Ctime:new Date()},
-            {id:3,name:&apos;千里马&apos;,Ctime:new Date()},
-        ]
-    },
-    methods:{
-        add(){//添加数据
-            this.list.push({id:this.id,name:this.name,Ctime:new Date()});
-        },
-        del(id){
-            //some 方法  如果return true 立即终止数组后续循环
-            // this.list.some((item,i)=&gt;{
-            //     if (item.id == id){
-            //         //splice 可以删除数据
-            //         this.list.splice(i,1)
-            //     }
-            // })
-            // findIndex  只用来找索引
-            var index= this.list.findIndex(item=&gt;{
-                if (item.id = id){
-                    return true
-                }
-            })
-            this.list.splice(index,1)
-        },
-        search(keywords){
-          //   var  newList=[];
-          //   this.list.forEach(item=&gt;{
-          //       //indexOf  判断 iteam.name是否包含字符keywords   注意：空字符串比较 返回值为0
-          //       if(item.name.indexOf(keywords) != -1){
-          //         newList.push(item)
-          //     }
-          // })
-          //   return newList;
-            //注意： forEach：遍历完全 不能被终止  some：如果 return true 立即终止数组后续循环   filter: 过滤 把查询到的过滤出来得到新数组  findIndex:找到对应对象的索引
-
-            return this.list.filter(item=&gt;{
-                //es6中 提供了 String.prototype.include（‘包含的字符’）
-                if(item.name.includes(keywords)){
-                    return item;
-                }
-            })
-        },
-
-    },
-
-
-})
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
       
 
       
@@ -427,7 +282,7 @@ var va = new Vue({
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/18/Vue-js-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/18/%E4%B8%8B%E8%BD%BDvueue-resource-js%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -441,18 +296,9 @@ var va = new Vue({
   
 <nav id="article-nav">
   
-    <a href="/2020/04/18/%E4%B8%8B%E8%BD%BDvueue-resource-js%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          下载vueue-resource.js下载链接
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/13/js-%E9%94%AE%E7%9B%98%E5%AF%B9%E5%BA%94%E7%9A%84%E9%94%AE%E7%9B%98%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%80%BC/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js,键盘对应的键盘修饰符值</div>
+    <a href="/2020/04/18/Vue-js-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue.js 制作一个简易商品管理</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -479,7 +325,7 @@ var va = new Vue({
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue-js制作简易商品管理"><span class="toc-number">1.</span> <span class="toc-text">Vue.js制作简易商品管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码如下"><span class="toc-number">1.1.</span> <span class="toc-text">代码如下</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下载vueue-resource-js下载链接"><span class="toc-number">1.</span> <span class="toc-text">下载vueue-resource.js下载链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#vueue-resource-js-下载链接"><span class="toc-number">1.1.</span> <span class="toc-text">vueue-resource.js 下载链接</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
