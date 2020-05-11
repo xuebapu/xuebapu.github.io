@@ -16,7 +16,7 @@
 <meta property="og:description" content="swiper刚进入页面图片不自动轮播和循环轮播不生效">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-11T10:27:09.000Z">
-<meta property="article:modified_time" content="2020-05-11T11:00:44.361Z">
+<meta property="article:modified_time" content="2020-05-11T11:14:28.770Z">
 <meta property="article:author" content="Xueba Pu">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="vue.js">
@@ -216,7 +216,7 @@ observeParents:true,//修改swiper的父元素时，自动初始化swiper </code
 <h3 id="方式二："><a href="#方式二：" class="headerlink" title="方式二："></a>方式二：</h3><p>在vue项目中经常会用轮播图，我一般用vue-awesome-swiper这个插件。但是我们轮播图片一般通过后端获取，循环展示，但会出现循环轮播失效的问题。原因是<strong>循环还没有完的时候swiper组件运行冲突</strong>出错导致的，在swiper组件上对数据判断v-if就可以解决。</p>
 <pre><code>&lt;swiper class=&quot;swiper&quot; v-if=&quot;banners.length &gt; 1&quot; :options=&quot;swiperOption&quot;&gt;</code></pre><p>我们判断一哈从父组件得到的数据就行了</p>
 <hr>
-<h3 id="若想了解更多属性推荐一个Swiper的中文文档"><a href="#若想了解更多属性推荐一个Swiper的中文文档" class="headerlink" title="若想了解更多属性推荐一个Swiper的中文文档"></a>若想了解更多属性推荐一个Swiper的中文文档</h3><p><a href="http://https://www.swiper.com.cn/api/observer/218.html" target="_blank" rel="noopener" title="中文文档">http://https://www.swiper.com.cn/api/observer/218.html</a></p>
+<h3 id="若想了解更多属性推荐一个Swiper的中文文档"><a href="#若想了解更多属性推荐一个Swiper的中文文档" class="headerlink" title="若想了解更多属性推荐一个Swiper的中文文档"></a>若想了解更多属性推荐一个Swiper的中文文档</h3><p><a href="https://www.swiper.com.cn/api/observer/218.html" target="_blank" rel="noopener" title="中文文档">https://www.swiper.com.cn/api/observer/218.html</a></p>
 <hr>
 <h3 id="我是用的vue-组件引入的"><a href="#我是用的vue-组件引入的" class="headerlink" title="我是用的vue 组件引入的"></a>我是用的vue 组件引入的</h3><pre><code>&lt;template&gt;
   &lt;div class=&quot;example-3d&quot;&gt;
