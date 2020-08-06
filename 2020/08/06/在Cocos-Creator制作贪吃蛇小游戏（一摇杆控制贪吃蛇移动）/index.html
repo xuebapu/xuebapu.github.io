@@ -6,15 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Xueba bloge</title>
+  <title>在Cocos Creator制作贪吃蛇小游戏（一摇杆控制贪吃蛇移动） | Xueba bloge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人简介">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xueba bloge">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="摇杆控制贪吃蛇移动我们先要了解贪吃蛇移动的原理： 蛇头经过的位置蛇尾也必定经过，所以只要把蛇头的位置检测出来，让第一段蛇身到原来蛇头的位置在依次往前移动就可已实现蛇的移动 项目目录 代码snck_ctrl var CELL_TIME &#x3D; 0.016; var jotstick&#x3D; require(&quot;joystick&quot;); cc.Class({     extends: cc.Co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Cocos Creator制作贪吃蛇小游戏（一摇杆控制贪吃蛇移动）">
+<meta property="og:url" content="http://yoursite.com/2020/08/06/%E5%9C%A8Cocos-Creator%E5%88%B6%E4%BD%9C%E8%B4%AA%E5%90%83%E8%9B%87%E5%B0%8F%E6%B8%B8%E6%88%8F%EF%BC%88%E4%B8%80%E6%91%87%E6%9D%86%E6%8E%A7%E5%88%B6%E8%B4%AA%E5%90%83%E8%9B%87%E7%A7%BB%E5%8A%A8%EF%BC%89/index.html">
 <meta property="og:site_name" content="Xueba bloge">
-<meta property="og:description" content="个人简介">
+<meta property="og:description" content="摇杆控制贪吃蛇移动我们先要了解贪吃蛇移动的原理： 蛇头经过的位置蛇尾也必定经过，所以只要把蛇头的位置检测出来，让第一段蛇身到原来蛇头的位置在依次往前移动就可已实现蛇的移动 项目目录 代码snck_ctrl var CELL_TIME &#x3D; 0.016; var jotstick&#x3D; require(&quot;joystick&quot;); cc.Class({     extends: cc.Co">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/08/06/m5D6IJGOZf2x97v.jpg">
+<meta property="article:published_time" content="2020-08-06T01:03:10.000Z">
+<meta property="article:modified_time" content="2020-08-06T01:29:59.792Z">
 <meta property="article:author" content="Xueba Pu">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="vue.js">
@@ -23,6 +26,7 @@
 <meta property="article:tag" content="springboot">
 <meta property="article:tag" content="springcloud">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/08/06/m5D6IJGOZf2x97v.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Xueba bloge" type="application/atom+xml">
   
@@ -168,214 +172,351 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-在Cocos-Creator制作贪吃蛇小游戏（一摇杆控制贪吃蛇移动）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      在Cocos Creator制作贪吃蛇小游戏（一摇杆控制贪吃蛇移动）
+    </h1>
+  
+
+        
+        <a href="/2020/08/06/%E5%9C%A8Cocos-Creator%E5%88%B6%E4%BD%9C%E8%B4%AA%E5%90%83%E8%9B%87%E5%B0%8F%E6%B8%B8%E6%88%8F%EF%BC%88%E4%B8%80%E6%91%87%E6%9D%86%E6%8E%A7%E5%88%B6%E8%B4%AA%E5%90%83%E8%9B%87%E7%A7%BB%E5%8A%A8%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-08-06T01:03:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-06</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="摇杆控制贪吃蛇移动"><a href="#摇杆控制贪吃蛇移动" class="headerlink" title="摇杆控制贪吃蛇移动"></a>摇杆控制贪吃蛇移动</h1><p>我们先要了解贪吃蛇移动的原理： 蛇头经过的位置蛇尾也必定经过，所以只要把蛇头的位置检测出来，让第一段蛇身到原来蛇头的位置在依次往前移动就可已实现蛇的移动</p>
+<h2 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h2><p><img src="https://i.loli.net/2020/08/06/m5D6IJGOZf2x97v.jpg" alt="111"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>snck_ctrl</p>
+<pre><code>var CELL_TIME = 0.016;
+var jotstick= require(&quot;joystick&quot;);
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        speed: 200,
+        BLOCK_LEN: 25,
+        stick: {
+            type: jotstick,
+            default: null,
+        }
+    },
+
+    capture_points(){
+        var len= (this.node.childrenCount - 1) * 25;
+        var xpos = 0;
+        var ypos = -len;
+        len = len * 2 ;
+        var total_time = len / this.speed;
+        this.pos_set = [];
+        this.pos_set.push(cc.v2(xpos,ypos));
+
+        var passed_time =0;
+        while (passed_time &lt; total_time){
+            ypos += (this.speed * CELL_TIME);
+            this.pos_set.push(cc.v2(xpos,ypos));
+            passed_time += CELL_TIME;
+        }
+        var head = this.node.children[0];
+        head.setPosition(this.pos_set[this.pos_set.length -1]);
+
+        var  point_num = Math.floor(this.BLOCK_LEN / (this.speed * CELL_TIME))
+        console.log(point_num)
+        for(var i = 1;i&lt;this.node.childrenCount;i++){
+            var item = this.node.children[i];
+            var index = this.pos_set.length - 1 - point_num * i;
+            console.log(index)
+            item.setPosition(this.pos_set[index]);
+            item.cur_index = index;
+        }
+    },
+
+    start () {
+        this.now_time =  0;
+        this.capture_points();
+    },
+
+    fixed_update(dt){
+        if(this.stick.dir === -1){
+            return;
+        }
+        var s = this.speed * dt;
+        var sx =  s * Math.cos(this.stick.radius);
+        var sy =  s * Math.sin(this.stick.radius);
+
+        var head = this.node.children[0];
+        var pos = head.getPosition();
+        pos.x += sx;
+        pos.y += sy;
+        head.setPosition(pos);
+        this.pos_set.push(cc.v2(pos.x,pos.y))
+        var degree = this.stick.radius * 180 / Math.PI;
+        console.log(this.stick.radius)
+        degree  -= 90;
+        head.angle = degree;
+        console.log(degree)
+        for(var i = 1;i&lt;this.node.childrenCount;i++){
+            var item = this.node.children[i];
+            var index = item.cur_index + 1;
+            item.setPosition(this.pos_set[index]);
+            item.cur_index = index;
+        }
+        var tail = this.node.children[this.node.childrenCount - 1];
+        if (tail.cur_index &gt;= 512){
+            for(var i = 1;i&lt;this.node.childrenCount;i++){
+                var item = this.node.children[i];
+                item.cur_index -= 512;
+            }
+            this.pos_set.splice(0,512);
+        }
+    },
+
+    update (dt) {
+        // console.log(&quot;updata&quot;)
+        this.now_time += dt;
+        while (this.now_time &gt;= CELL_TIME){
+            this.fixed_update(CELL_TIME);
+            this.now_time -= CELL_TIME;
+        }
+    },
+});</code></pre><p>joystick</p>
+<pre><code>cc.Class({
+extends: cc.Component,
+
+properties: {
+    stick: {
+        type: cc.Node,
+        default: null,
+    },
+    max_r:10,
+},
+onLoad: function(){
+    this.dir = -1;
+    this.radius = 0;
+    this.stick.on(cc.Node.EventType.TOUCH_MOVE,function (e) {
+        var w_pos = e.getLocation();
+        var pos = this.node.convertToNodeSpaceAR(w_pos);
+        var len = (pos.mag());
+        if(len &gt; this.max_r){
+            pos.x = pos.x * this.max_r / len ;
+            pos.y = pos.y * this.max_r / len ;
+        }
+        this.stick.setPosition(pos);
+
+        if(len&lt;this.min_r){
+            return;
+        }
+
+        this.dir = -1;
+        var r = Math.atan2(pos.y,pos.x);
+        if(r &gt;= -8 * Math.PI / 8 &amp;&amp; r  &lt; -7 *Math.PI / 8){
+            this.dir = 2;
+        }
+        else if (r &gt;= -7 * Math.PI / 8 &amp;&amp; r  &lt; -5 *Math.PI / 8){
+            this.dir = 6;
+        }
+        else if (r &gt;= -5 * Math.PI / 8 &amp;&amp; r  &lt; -3 *Math.PI / 8){
+            this.dir = 1;
+        }
+        else if (r &gt;= -3 * Math.PI / 8 &amp;&amp; r  &lt; -1 *Math.PI / 8){
+            this.dir = 7;
+        }
+        else if (r &gt;= -1 * Math.PI / 8 &amp;&amp; r  &lt; 1 *Math.PI / 8){
+            this.dir = 3;
+        }
+        else if (r &gt;= 1 * Math.PI / 8 &amp;&amp; r  &lt; 3 *Math.PI / 8){
+            this.dir = 4;
+        }
+        else if (r &gt;= 3 * Math.PI / 8 &amp;&amp; r  &lt; 5 *Math.PI / 8){
+            this.dir = 0;
+        }
+        else if (r &gt;= 5 * Math.PI / 8 &amp;&amp; r  &lt; 7 *Math.PI / 8){
+            this.dir = 5;
+        }
+        else if (r &gt;= 7 * Math.PI / 8 &amp;&amp; r  &lt; 8 *Math.PI / 8){
+            this.dir = 2;
+        }
+        this.radius = r;
+    }.bind(this),this);
+
+    this.stick.on(cc.Node.EventType.TOUCH_END,function (e){
+        this.stick.setPosition(cc.v2(0,0));
+        this.dir = -1;
+    }.bind(this),this);
+
+    this.stick.on(cc.Node.EventType.TOUCH_CANCEL,function (e){
+        this.stick.setPosition(cc.v2(0,0));
+        this.dir = -1;
+    }.bind(this),this);
+
+},
+
+start () {
+    this.onLoad()
+},
+
+update (dt) {
+
+},
+});</code></pre><p>这样 就可以移动了</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢大佬！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/zfb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wx.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/13/js-%E9%94%AE%E7%9B%98%E5%AF%B9%E5%BA%94%E7%9A%84%E9%94%AE%E7%9B%98%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2020-04-13T10:37:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/13/js-%E9%94%AE%E7%9B%98%E5%AF%B9%E5%BA%94%E7%9A%84%E9%94%AE%E7%9B%98%E4%BF%AE%E9%A5%B0%E7%AC%A6%E5%80%BC/">js,键盘对应的键盘修饰符值</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/06/%E5%9C%A8Cocos-Creator%E5%88%B6%E4%BD%9C%E8%B4%AA%E5%90%83%E8%9B%87%E5%B0%8F%E6%B8%B8%E6%88%8F%EF%BC%88%E4%B8%80%E6%91%87%E6%9D%86%E6%8E%A7%E5%88%B6%E8%B4%AA%E5%90%83%E8%9B%87%E7%A7%BB%E5%8A%A8%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/13/vue-js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95v-clock-v-text-v-html-v-model-v-bind/" class="archive-article-date">
-  	<time datetime="2020-04-13T10:37:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/16/vue-%E8%B7%AF%E7%94%B1%E6%8B%A6%E6%88%AA%EF%BC%88%E7%99%BB%E5%BD%95%E6%89%8D%E8%83%BD%E6%9F%A5%E7%9C%8B%E5%8A%9F%E8%83%BD-C%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue 路由拦截（登录才能查看功能[C）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/13/vue-js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95v-clock-v-text-v-html-v-model-v-bind/">vue-js基本语法v-clock-v-text-v-html-v-model-v-bind</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#摇杆控制贪吃蛇移动"><span class="toc-number">1.</span> <span class="toc-text">摇杆控制贪吃蛇移动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#项目目录"><span class="toc-number">1.1.</span> <span class="toc-text">项目目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">1.2.</span> <span class="toc-text">代码</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/12/%E4%B8%8B%E8%BD%BDvue-devtools-%E5%AE%89%E8%A3%85-%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%B2%A1%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%EF%BC%88not-detected%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-04-12T11:30:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/12/%E4%B8%8B%E8%BD%BDvue-devtools-%E5%AE%89%E8%A3%85-%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%B2%A1%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%EF%BC%88not-detected%EF%BC%89/">下载vue-devtools 安装 控制台没显示问题（not detected）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/12/vue-%E5%88%B6%E4%BD%9C%E8%B7%91%E9%A9%AC%E7%81%AF%E6%95%88%E6%9E%9C-%E6%9E%81%E7%AE%80%E5%8D%95%E7%9A%84%E8%AE%A1%E7%AE%97%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2020-04-12T02:48:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/12/vue-%E5%88%B6%E4%BD%9C%E8%B7%91%E9%A9%AC%E7%81%AF%E6%95%88%E6%9E%9C-%E6%9E%81%E7%AE%80%E5%8D%95%E7%9A%84%E8%AE%A1%E7%AE%97%E5%99%A8/">vue 制作跑马灯效果 极简单的计算器0</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/03/HTML5-meter%E6%A0%87%E7%AD%BE%EF%BC%8C%E5%8F%8A%E5%85%B6%E9%A2%9C%E8%89%B2%E5%8F%98%E5%8C%96%E8%A7%84%E5%88%99/" class="archive-article-date">
-  	<time datetime="2020-03-03T04:42:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/03/HTML5-meter%E6%A0%87%E7%AD%BE%EF%BC%8C%E5%8F%8A%E5%85%B6%E9%A2%9C%E8%89%B2%E5%8F%98%E5%8C%96%E8%A7%84%E5%88%99/">HTML5 meter标签，及其颜色变化规则</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/25/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-02-25T07:16:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/25/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/16/hello-world/" class="archive-article-date">
-  	<time datetime="2020-01-16T08:58:20.114Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/16/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&amp;laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -399,8 +540,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
